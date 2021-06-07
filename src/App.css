@@ -1,38 +1,319 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #644bff;
+  padding: 0 20px;
+}
+
+::selection {
+  color: #fff;
+  background: #664AFF;
+}
+
+.wrapper {
+  max-width: 450px;
+  margin: 30px auto;
+}
+
+.wrapper .search-input {
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+.search-input input {
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input.active input {
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li {
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li {
+  display: block;
+}
+
+.autocom-box li:hover {
+  background: #efefef;
+}
+
+.search-input .icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+}
+
+.suggestions {
+  list-style: none;
+  padding-left: 15px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+.suggestions:hover {
+  background-color: rgba(206, 205, 205, 0.438);
+}
+
+.First {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  height: 3rem;
+  width: 20rem;
+  font-size: 1.8rem;
+}
+
+.Second {
+  height: 3rem;
+  width: 20rem;
+  font-size: 1.8rem;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 30rem;
+  margin-bottom: 50px;
+}
+
+/* .top {
+  font-size: 2rem;
+  margin-top: -30rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bottom {
+  font-size: 2rem;
+  margin-top: 13rem;
+  text-align: center;
+} */
+
+.Parent {
+  border: 5px solid black;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  bottom: 50%;
+  text-align: center;
+  cursor: move;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700italic);
+* {
+  margin: 0px;
+  padding: 0px
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, button {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #2ecc71;
+}
+
+.button-two {
+  text-align: center;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 0 0 100px;
+}
+
+/*Button Two*/
+
+.button-two {
+  margin-top: 5rem;
+  margin-right: 3rem;
+  border-radius: 4px;
+  background-color: #d35400;
+  border: none;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+}
+
+.button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-two span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.bottom {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  bottom: 50%;
+  text-align: center;
+  cursor: move;
+}
+
+.cards-list {
+  z-index: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-right: 35px;
+  width: 350px;
+  height: 400px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+  -webkit-border-radius: 0px 0px 40px 40px;
+  -moz-border-radius: 0px 0px 40px 40px;
+  -ms-border-radius: 0px 0px 40px 40px;
+  -o-border-radius: 0px 0px 40px 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25), -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  -webkit-transform: scale(0.9, 0.9);
+  -moz-transform: scale(0.9, 0.9);
+  -ms-transform: scale(0.9, 0.9);
+  -o-transform: scale(0.9, 0.9);
+}
+
+.title-white {
+  color: black;
+  opacity: 50%;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
   }
 }
+
+/* .card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  transition: 0.4s;
+} */
